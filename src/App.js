@@ -1,24 +1,52 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import "./App.css";
+import UpcomingLiveConsulation from "./Components/UpcomingLiveConsulation/UpcomingLiveConsulation";
+import BuyPlans from "./Components/BuyPlans/Buyplans";
+import ViewPlans from "./Components/ViewPlans/ViewPlans";
+import Login from "./Components/Login/Login";
+import Footer from "./Components/Footer/Footer";
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Router>
+        <div>
+          <ul>
+            <li >
+              <Link to="/login">
+                <span className="button">Login</span>
+              </Link>
+            </li>
+            <li >
+              <Link to="/viewplans" style={{ marginTop: "20px" }}>
+                
+                  View Plans
+                
+              </Link>
+            </li>
+            <li>
+              <Link to="/buyplans" style={{ marginTop: "20px" }}>
+                Buy plans
+              </Link>
+            </li>
+            <li>
+              <Link to="/">
+                <span className="">
+                  <small>Upcoming</small> <div className="upcoming"></div>
+                </span>
+                <br />
+                Live Consulation
+              </Link>
+            </li>
+          </ul>
+          <hr />
+          <Route exact path="/" component={UpcomingLiveConsulation} />
+          <Route path="/buyplans" component={BuyPlans} />
+          <Route path="/viewplans" component={ViewPlans} />
+          <Route path="/login" component={Login} />
+        </div>
+      </Router>
+      <Footer />
     </div>
   );
 }

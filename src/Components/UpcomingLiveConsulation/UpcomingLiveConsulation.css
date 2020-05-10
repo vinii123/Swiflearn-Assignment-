@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.UpcomingContainer {
+  text-align: left;
+  display: block;
+}
+.headingConcept {
+  margin: 10px;
+  padding: 45px;
+}
+.headingLive {
+  margin-top: 400px;
+  padding: 45px;
+}
+.section1{
+  margin-top: 10px;
+}
+.section2{
+  margin-top: 10px;
+}
