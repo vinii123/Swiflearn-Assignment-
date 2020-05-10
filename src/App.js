@@ -13,23 +13,6 @@ function App() {
         <div>
           <ul>
             <li >
-              <Link to="/login">
-                <span className="button">Login</span>
-              </Link>
-            </li>
-            <li >
-              <Link to="/viewplans" style={{ marginTop: "20px" }}>
-                
-                  View Plans
-                
-              </Link>
-            </li>
-            <li>
-              <Link to="/buyplans" style={{ marginTop: "20px" }}>
-                Buy plans
-              </Link>
-            </li>
-            <li>
               <Link to="/">
                 <span className="">
                   <small>Upcoming</small> <div className="upcoming"></div>
@@ -37,6 +20,22 @@ function App() {
                 <br />
                 Live Consulation
               </Link>
+            </li>
+            <li >
+              <Link to="/buyplans" >
+                Buy plans
+                
+                 
+              </Link>
+            </li>
+            <li>
+              <Link to="/viewplans" >
+                View Plans
+              </Link>
+            </li>
+            <li>
+              <Link to="/login">
+                <span className="button">Login</span></Link>
             </li>
           </ul>
           <hr />
